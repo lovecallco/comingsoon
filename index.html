@@ -143,56 +143,120 @@
     @media (max-width: 768px) {
       html, body {
         height: 100%;
-        position: fixed;
         width: 100%;
         overflow: hidden;
+        position: fixed;
+        margin: 0;
+        padding: 0;
       }
 
       .container {
-        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        margin: 0;
         padding: 16px;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
         gap: 16px;
-        height: 100vh;
-        border-radius: 48px;
-        max-width: 400px;
-        margin: 0 auto;
-        overflow: hidden;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
       }
 
       .image-section {
-        flex: none;
-        height: 320px;
-        border-radius: 32px;
-        overflow: hidden;
-        margin-top: 0;
+        flex: 0 0 40%;
+        max-height: 40vh;
+        min-height: 280px;
+        border-radius: 24px;
+        margin: 0;
       }
 
       .image-section img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 50% 0%;
+        object-position: center top;
       }
 
       .content-section {
-        flex: none;
-        padding: 0 24px 24px;
+        flex: 0 0 auto;
+        padding: 24px 16px;
         gap: 24px;
+        justify-content: flex-start;
+      }
+
+      .header-content {
+        gap: 24px;
+      }
+
+      .logo {
+        width: 120px;
+        height: 24px;
       }
 
       .title {
         font-size: 24px;
-        margin-top: 0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .form-group {
+        width: 100%;
+        gap: 12px;
       }
 
       .input-field {
+        height: 56px;
+        border-radius: 28px;
+        font-size: 16px;
         background: rgba(255, 255, 255, 0.1);
-        border-radius: 32px;
       }
 
       .submit-btn {
+        height: 56px;
+        border-radius: 28px;
+        font-size: 16px;
         margin-top: 4px;
-        border-radius: 32px;
+      }
+
+      .blur-effect {
+        width: 100vw;
+        height: 100vh;
+        bottom: -50vh;
+        filter: blur(100px);
+      }
+    }
+
+    /* Add iPhone-specific adjustments */
+    @media (max-width: 390px) {
+      .container {
+        padding: 12px;
+      }
+
+      .image-section {
+        min-height: 240px;
+      }
+
+      .content-section {
+        padding: 20px 12px;
+      }
+
+      .title {
+        font-size: 22px;
+      }
+    }
+
+    /* Handle notch/dynamic island devices */
+    @supports (padding: env(safe-area-inset-top)) {
+      @media (max-width: 768px) {
+        .container {
+          padding-top: max(16px, env(safe-area-inset-top));
+          padding-bottom: max(16px, env(safe-area-inset-bottom));
+          padding-left: max(16px, env(safe-area-inset-left));
+          padding-right: max(16px, env(safe-area-inset-right));
+        }
       }
     }
   </style>
