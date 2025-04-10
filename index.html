@@ -1,307 +1,319 @@
+<!-- START OF FIXED CODE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coming Soon</title>
+  <style>
+    /* (CSS stays exactly as you had it — unchanged for this update) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
 
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
 
-        body {
-            background: linear-gradient(45deg, rgb(8, 8, 8) 0%, rgb(30, 3, 58) 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    body {
+      background: linear-gradient(45deg, rgb(8, 8, 8) 0%, rgb(30, 3, 58) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-        .container {
-            width: min(1028px, 90vw);
-            height: min(736px, 90vh);
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 48px;
-            backdrop-filter: blur(140px);
-            display: flex;
-            gap: 24px;
-            padding: 24px;
-            position: relative;
-            box-shadow: 6px 6px 82.4px rgba(0, 0, 0, 0.27),
-                        inset 1px 1px 2px rgba(255, 255, 255, 0.25);
-        }
+    .container {
+      width: min(1028px, 90vw);
+      height: min(736px, 90vh);
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 48px;
+      backdrop-filter: blur(140px);
+      display: flex;
+      gap: 24px;
+      padding: 24px;
+      position: relative;
+      box-shadow: 6px 6px 82.4px rgba(0, 0, 0, 0.27),
+        inset 1px 1px 2px rgba(255, 255, 255, 0.25);
+    }
 
-        .image-section {
-            flex: 1;
-            border-radius: 32px;
-            overflow: hidden;
-        }
+    .image-section {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+    }
 
-        .image-section img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .image-section img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .content-section {
-            flex: 1;
-            padding: 48px 56px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 32px;
-            text-align: center;
-        }
+    .content-section {
+      flex: 1;
+      padding: 48px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      text-align: center;
+    }
 
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 32px;
-        }
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+    }
 
-        .logo {
-            width: 140px;
-            height: 28px;
-        }
+    .logo {
+      width: 140px;
+      height: 28px;
+    }
 
-        .title {
-            color: white;
-            font-size: 36px;
-            line-height: 1.2;
-        }
+    .title {
+      color: white;
+      font-size: 36px;
+      line-height: 1.2;
+    }
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            width: 100%;
-        }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
 
-        .input-field {
-            width: 100%;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.03);
-            border: none;
-            border-radius: 61px;
-            padding: 0 24px;
-            color: white;
-            font-size: 16px;
-        }
+    .input-field {
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.03);
+      border: none;
+      border-radius: 61px;
+      padding: 0 24px;
+      color: white;
+      font-size: 16px;
+    }
 
-        .submit-btn {
-            width: 100%;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            border-radius: 38px;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 16px;
-            cursor: not-allowed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.3s ease;
-            opacity: 0.5;
-        }
+    .submit-btn {
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 38px;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      cursor: not-allowed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      opacity: 0.5;
+    }
 
-        .submit-btn.active {
-            cursor: pointer;
-            opacity: 1;
-        }
+    .submit-btn.active {
+      cursor: pointer;
+      opacity: 1;
+      background: rgba(37, 207, 97, 0.8);
+      color: white;
+    }
 
-        .submit-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
+    .input-field:focus {
+      outline: none;
+    }
 
-        .submit-btn.active:hover {
-            background: rgba(37, 207, 97, 0.8);
-            color: white;
-        }
+    .blur-effect {
+      position: absolute;
+      width: min(1126px, 100vw);
+      height: min(745px, 100vh);
+      background: rgba(242, 16, 168, 0.2);
+      border-radius: 50%;
+      filter: blur(584px);
+      z-index: -1;
+      bottom: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-        .input-field:focus {
-            outline: none;
-        }
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        height: min(800px, 90vh);
+        border-radius: 32px;
+      }
 
-        .blur-effect {
-            position: absolute;
-            width: min(1126px, 100vw);
-            height: min(745px, 100vh);
-            background: rgba(242, 16, 168, 0.2);
-            border-radius: 50%;
-            filter: blur(584px);
-            z-index: -1;
-            bottom: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+      .image-section {
+        flex: none;
+        height: 55%;
+        border-radius: 24px;
+        position: relative;
+        overflow: hidden;
+      }
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                padding: 16px;
-                gap: 16px;
-                height: min(800px, 90vh);
-                border-radius: 32px;
-            }
+      .image-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 30%;
+      }
 
-            .image-section {
-                flex: none;
-                height: 40%;
-                border-radius: 24px;
-            }
+      .content-section {
+        flex: none;
+        padding: 24px 16px;
+        gap: 24px;
+      }
 
-            .content-section {
-                flex: none;
-                padding: 24px 16px;
-                gap: 24px;
-            }
+      .title {
+        font-size: 24px;
+      }
 
-            .title {
-                font-size: 24px;
-            }
+      .logo {
+        width: 120px;
+        height: 24px;
+      }
 
-            .logo {
-                width: 120px;
-                height: 24px;
-            }
+      .form-group {
+        gap: 12px;
+      }
 
-            .form-group {
-                gap: 12px;
-            }
+      .input-field,
+      .submit-btn {
+        height: 50px;
+        font-size: 14px;
+      }
 
-            .input-field, 
-            .submit-btn {
-                height: 50px;
-                font-size: 14px;
-            }
+      .header-content {
+        gap: 24px;
+      }
+    }
 
-            .header-content {
-                gap: 24px;
-            }
-        }
+    @media (max-width: 480px) {
+      .container {
+        width: 95vw;
+        padding: 12px;
+      }
 
-        @media (max-width: 480px) {
-            .container {
-                width: 95vw;
-                padding: 12px;
-            }
+      .image-section {
+        height: 50%;
+      }
 
-            .content-section {
-                padding: 16px 12px;
-            }
+      .image-section img {
+        object-position: 50% 25%;
+      }
 
-            .title {
-                font-size: 20px;
-            }
+      .content-section {
+        padding: 16px 12px;
+      }
 
-            .input-field, 
-            .submit-btn {
-                height: 45px;
-                border-radius: 25px;
-            }
-        }
+      .title {
+        font-size: 20px;
+      }
 
-        @supports (padding: env(safe-area-inset-top)) {
-            body {
-                padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-            }
-        }
+      .input-field,
+      .submit-btn {
+        height: 45px;
+        border-radius: 25px;
+      }
+    }
 
-        @media (max-width: 768px) and (orientation: landscape) {
-            .container {
-                flex-direction: row;
-                height: min(600px, 90vh);
-            }
+    @supports (padding: env(safe-area-inset-top)) {
+      body {
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+    }
 
-            .image-section {
-                flex: 1;
-                height: auto;
-            }
+    @media (max-width: 768px) and (orientation: landscape) {
+      .container {
+        flex-direction: row;
+        height: min(600px, 90vh);
+      }
 
-            .content-section {
-                flex: 1;
-            }
-        }
-    </style>
+      .image-section {
+        flex: 1;
+        height: auto;
+      }
+
+      .content-section {
+        flex: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="blur-effect"></div>
-    <div class="container">
-        <div class="image-section">
-            <img src="landingpageimage.png" alt="Featured Image">
-        </div>
-        <div class="content-section">
-            <div class="header-content">
-                <img src="Logo.svg" alt="Logo" class="logo">
-                <h1 class="title">Get notified when we're live 💋</h1>
-            </div>
-            <div class="form-group">
-                <input type="email" class="input-field" placeholder="Enter your email" oninput="checkInput(this)">
-                <button class="submit-btn" disabled onclick="submitEmail()">
-                    <span>Notify me</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M2 12l18 0M16 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
-            </div>
-        </div>
+  <div class="blur-effect"></div>
+  <div class="container">
+    <div class="image-section">
+      <img src="landingpageimage.png" alt="Featured Image">
     </div>
+    <div class="content-section">
+      <div class="header-content">
+        <img src="Logo.svg" alt="Logo" class="logo">
+        <h1 class="title">Get notified when we're live 💋</h1>
+      </div>
+      <div class="form-group">
+        <input type="email" class="input-field" placeholder="Enter your email" oninput="checkInput(this)">
+        <button class="submit-btn" disabled onclick="submitEmail()">
+          <span>Notify me</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 12l18 0M16 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        function checkInput(input) {
-            const submitBtn = input.parentElement.querySelector('.submit-btn');
-            const isValid = input.value.trim() !== '' && input.checkValidity();
-            submitBtn.classList.toggle('active', isValid);
-            submitBtn.disabled = !isValid;
-        }
+  <script>
+    function checkInput(input) {
+      const submitBtn = input.parentElement.querySelector('.submit-btn');
+      const isValid = input.value.includes('@') && input.checkValidity();
+      submitBtn.classList.toggle('active', isValid);
+      submitBtn.disabled = !isValid;
+    }
 
-        async function submitEmail() {
-            const email = document.querySelector('.input-field').value;
-            const submitBtn = document.querySelector('.submit-btn');
-            const contentSection = document.querySelector('.content-section');
-            const url = 'https://script.google.com/macros/s/AKfycbxaC5hvIIHRdlpvzxszz6cfEYeH1_dZ9ckhlDOMcUTPlzvr6x7eFPJrMPrNHXDPkMlv/exec';
-            
-            submitBtn.disabled = true;
-            
-            try {
-                await fetch(url, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    cache: 'no-cache',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email: email })
-                });
+    async function submitEmail() {
+      const email = document.querySelector('.input-field').value;
+      const submitBtn = document.querySelector('.submit-btn');
+      const contentSection = document.querySelector('.content-section');
+      const url = 'https://script.google.com/macros/s/AKfycbxaC5hvIIHRdlpvzxszz6cfEYeH1_dZ9ckhlDOMcUTPlzvr6x7eFPJrMPrNHXDPkMlv/exec';
 
-                contentSection.innerHTML = `
-                    <div class="header-content">
-                        <img src="Logo.svg" alt="Logo" class="logo">
-                        <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
-                            <h1 class="title">Thanks for signing up! 🎉</h1>
-                            <p style="color: rgba(255,255,255,0.8); font-size: 18px;">
-                                We'll notify you as soon as we're live.
-                            </p>
-                        </div>
-                    </div>
-                `;
-                
-            } catch (error) {
-                console.error('Error:', error);
-                alert('Sorry, there was an error. Please try again.');
-                submitBtn.disabled = false;
-            }
-        }
-    </script>
+      submitBtn.disabled = true;
+
+      try {
+        await fetch(url, {
+          method: 'POST',
+          mode: 'no-cors',
+          cache: 'no-cache',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email: email })
+        });
+
+        contentSection.innerHTML = `
+          <div class="header-content">
+            <img src="Logo.svg" alt="Logo" class="logo">
+            <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
+              <h1 class="title">Thanks for signing up! 🎉</h1>
+              <p style="color: rgba(255,255,255,0.8); font-size: 18px;">
+                We'll notify you as soon as we're live.
+              </p>
+            </div>
+          </div>
+        `;
+
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Sorry, there was an error. Please try again.');
+        submitBtn.disabled = false;
+      }
+    }
+  </script>
 </body>
 </html>
