@@ -151,4 +151,157 @@
                 padding: 16px;
                 gap: 16px;
                 height: min(800px, 90vh);
-                border-radius:
+                border-radius: 32px;
+            }
+
+            .image-section {
+                flex: none;
+                height: 40%;
+                border-radius: 24px;
+            }
+
+            .content-section {
+                flex: none;
+                padding: 24px 16px;
+                gap: 24px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .logo {
+                width: 120px;
+                height: 24px;
+            }
+
+            .form-group {
+                gap: 12px;
+            }
+
+            .input-field, 
+            .submit-btn {
+                height: 50px;
+                font-size: 14px;
+            }
+
+            .header-content {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95vw;
+                padding: 12px;
+            }
+
+            .content-section {
+                padding: 16px 12px;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .input-field, 
+            .submit-btn {
+                height: 45px;
+                border-radius: 25px;
+            }
+        }
+
+        @supports (padding: env(safe-area-inset-top)) {
+            body {
+                padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            }
+        }
+
+        @media (max-width: 768px) and (orientation: landscape) {
+            .container {
+                flex-direction: row;
+                height: min(600px, 90vh);
+            }
+
+            .image-section {
+                flex: 1;
+                height: auto;
+            }
+
+            .content-section {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blur-effect"></div>
+    <div class="container">
+        <div class="image-section">
+            <img src="landingpageimage.png" alt="Featured Image">
+        </div>
+        <div class="content-section">
+            <div class="header-content">
+                <img src="Logo.svg" alt="Logo" class="logo">
+                <h1 class="title">Get notified when we're live 💋</h1>
+            </div>
+            <div class="form-group">
+                <input type="email" class="input-field" placeholder="Enter your email" oninput="checkInput(this)">
+                <button class="submit-btn" disabled onclick="submitEmail()">
+                    <span>Notify me</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M2 12l18 0M16 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkInput(input) {
+            const submitBtn = input.parentElement.querySelector('.submit-btn');
+            const isValid = input.value.trim() !== '' && input.checkValidity();
+            submitBtn.classList.toggle('active', isValid);
+            submitBtn.disabled = !isValid;
+        }
+
+        async function submitEmail() {
+            const email = document.querySelector('.input-field').value;
+            const submitBtn = document.querySelector('.submit-btn');
+            const contentSection = document.querySelector('.content-section');
+            const url = 'https://script.google.com/macros/s/AKfycbxaC5hvIIHRdlpvzxszz6cfEYeH1_dZ9ckhlDOMcUTPlzvr6x7eFPJrMPrNHXDPkMlv/exec';
+            
+            submitBtn.disabled = true;
+            
+            try {
+                await fetch(url, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    cache: 'no-cache',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                contentSection.innerHTML = `
+                    <div class="header-content">
+                        <img src="Logo.svg" alt="Logo" class="logo">
+                        <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
+                            <h1 class="title">Thanks for signing up! 🎉</h1>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 18px;">
+                                We'll notify you as soon as we're live.
+                            </p>
+                        </div>
+                    </div>
+                `;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, there was an error. Please try again.');
+                submitBtn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
