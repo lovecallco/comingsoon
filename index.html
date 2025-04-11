@@ -1,4 +1,4 @@
-<!-- START FIXED VERSION -->
+<!-- FINAL VERSION WITH LOGO FIXED FOR MOBILE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
   <style>
-    /* Base styles unchanged for desktop */
     * {
       margin: 0;
       padding: 0;
@@ -167,7 +166,8 @@
       .logo {
         width: 120px;
         height: auto;
-        margin-top: 28px;
+        margin-top: calc(env(safe-area-inset-top) + 20px);
+        margin-bottom: 8px;
       }
 
       .image-section {
