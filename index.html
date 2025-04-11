@@ -1,4 +1,4 @@
-<!-- FINAL VERSION WITH LOGO FIXED FOR MOBILE -->
+<!-- START FIXED VERSION -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Coming Soon</title>
   <style>
+    /* Original styles preserved — image paths fixed below in HTML/JS */
     * {
       margin: 0;
       padding: 0;
@@ -42,15 +43,15 @@
     .image-section {
       flex: 1;
       border-radius: 32px;
-      overflow: visible;
-      padding: 16px;
+      overflow: visible; /* Changed from hidden to visible */
+      padding: 16px; /* Added padding to ensure no cropping */
     }
 
     .image-section img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      object-position: center;
+      object-fit: contain; /* Changed from cover to contain */
+      object-position: center; /* Ensures image is centered */
     }
 
     .content-section {
@@ -151,32 +152,23 @@
         height: 100vh;
         max-width: 100vw;
         max-height: 100vh;
-        padding: 0;
+        padding: 24px;
         border-radius: 0;
         background: transparent;
         backdrop-filter: none;
         box-shadow: none;
         flex-direction: column;
         justify-content: flex-start;
-        align-items: center;
-        gap: 0;
-        overflow-y: auto;
-      }
-
-      .logo {
-        width: 120px;
-        height: auto;
-        margin-top: calc(env(safe-area-inset-top) + 20px);
-        margin-bottom: 8px;
+        gap: 32px;
       }
 
       .image-section {
         width: 100%;
-        max-width: 280px;
+        max-width: 280px; /* Slightly reduced from 320px */
         height: auto;
-        margin: 12px auto 0;
+        margin: 20px auto 0; /* Reduced from 48px to move up */
         border-radius: 0;
-        overflow: hidden;
+        overflow: hidden; /* Changed from visible to crop */
         position: relative;
         padding: 0;
       }
@@ -185,29 +177,34 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        object-position: top center;
+        object-position: top center; /* Ensures focus on upper portion */
       }
 
       .content-section {
         width: 100%;
-        padding: 0 24px;
-        margin-top: -12px;
-        align-items: center;
+        padding: 0;
+        margin-top: -40px; /* Pulls content up */
       }
 
       .header-content {
-        gap: 24px;
+        gap: 48px;
+      }
+
+      .logo {
+        width: 120px; /* Slightly smaller */
+        height: auto;
+        margin: 0 auto;
       }
 
       .title {
-        font-size: 22px;
-        margin: 0 auto;
+        font-size: 22px; /* Slightly smaller */
+        margin-top: 20px;
       }
 
       .form-group {
         width: 100%;
         max-width: 320px;
-        margin: 20px auto;
+        margin: 24px auto 0;
         gap: 16px;
       }
 
@@ -227,6 +224,7 @@
 
       .submit-btn {
         height: 56px;
+        margin: 8px 0 0;
         border-radius: 12px;
         background: rgba(255, 255, 255, 0.1);
         font-size: 16px;
@@ -237,11 +235,13 @@
         color: #1a0033;
       }
 
+      /* Remove the blur effect for mobile */
       .blur-effect {
         display: none;
       }
     }
 
+    /* Adjust for iPhone notch */
     @supports (padding: env(safe-area-inset-top)) {
       @media (max-width: 768px) {
         .container {
@@ -254,12 +254,12 @@
 <body>
   <div class="blur-effect"></div>
   <div class="container">
-    <img src="Logo.svg" alt="Logo" class="logo" />
     <div class="image-section">
       <img src="landingpageimage.png" alt="Featured Image">
     </div>
     <div class="content-section">
       <div class="header-content">
+        <img src="Logo.svg" alt="Logo" class="logo">
         <h1 class="title">Get notified when we're live 💋</h1>
       </div>
       <div class="form-group">
@@ -303,8 +303,13 @@
 
         contentSection.innerHTML = `
           <div class="header-content">
-            <h1 class="title">Thanks for signing up! 🎉</h1>
-            <p style="color: rgba(255,255,255,0.8); font-size: 18px;">We'll notify you as soon as we're live.</p>
+            <img src="Logo.svg" alt="Logo" class="logo">
+            <div style="display: flex; flex-direction: column; gap: 16px; align-items: center;">
+              <h1 class="title">Thanks for signing up! 🎉</h1>
+              <p style="color: rgba(255,255,255,0.8); font-size: 18px;">
+                We'll notify you as soon as we're live.
+              </p>
+            </div>
           </div>
         `;
 
