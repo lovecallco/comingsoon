@@ -22,12 +22,12 @@ function checkInput(input) {
     const originalHTML = button.innerHTML;
     button.disabled = true;
     button.innerHTML = `
-      <span>Submitting...</span>
-      <svg width="20" height="20" viewBox="0 0 50 50" fill="none">
-        <circle cx="25" cy="25" r="20" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
-          <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite"/>
-        </circle>
-      </svg>
+     <span>Submitting...</span>
+  <svg width="20" height="20" viewBox="0 0 50 50" fill="none" style="vertical-align: middle;">
+    <circle cx="25" cy="25" r="20" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round">
+      <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
+    </circle>
+  </svg>
     `;
   
     try {
