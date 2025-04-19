@@ -11,25 +11,29 @@
 </head>
 
 <body>
+ <div class="container_wrapper">
   <div class="logo">
     <img src="Logo.svg" alt="Logo">
   </div>
 
-  <div class="modelContainer">
-    <img src="model.png" alt="Model" class="model" />
-    <h1 class="infoText">
-      COMING <br /><span>SOON</span>
-    </h1>
-  </div>
-
-  <div class="content">
-    <p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
-
-    <div class="notify-form">
-      <input type="email" placeholder="Enter your email" oninput="checkInput(this)" />
-      <button disabled onclick="submitEmail(this)">Notify me</button>
+  <div class="model_wrapper">
+    <div class="modelContainer">
+      <img src="./model.png" alt="Model" class="model" />
+      <h1 class="infoText">
+        <span class="comming_span">COMING</span> <br /><span class="soon_span">SOON</span>
+      </h1>
+    </div>
+  
+    <div class="content">
+      <p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
+  
+      <div class="notify-form">
+        <input type="email" placeholder="Enter your email" oninput="checkInput(this)" />
+        <button disabled onclick="submitEmail(this)">Notify me</button>
+      </div>
     </div>
   </div>
+ </div>
 </body>
 
 </html>

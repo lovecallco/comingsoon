@@ -5,48 +5,65 @@
   }
   
   body {
-    min-height: 100vh;
-    background: radial-gradient(
-      ellipse at center,
-      rgba(255, 0, 144, 0.15),
-      rgb(24, 3, 22),
-      rgb(22, 3, 21)
-    );
-    background-color: #3A0635;
+    background-image: linear-gradient(to top,  #1F033A, #080808);
     font-family: 'Inter', sans-serif;
-    color: white;
-    padding: 50px;
-    overflow-x: hidden;
+    background-image: no-repeat;
+
+   
   }
-  
-  .modelContainer {
-    margin: auto;
-    width: 453.23px;
-    height: 586.45px;
+  .container_wrapper{
+    background-image: url("./model_bg.png");
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 3.123rem 3.123rem 5.8rem 3.123rem  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
-  
-  .model {
-    width: 368px;
-    margin: auto;
-    height: 473px;
-    display: block;
+  .model_wrapper{
+    position: relative;
+    height: fit-content ;
   }
 
+   .modelContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+
+
+  }
+
+  
+  
+
+ .model{
+  width: 28.3rem;
+
+}  
   .infoText{
     font-size: 105.45px;
     text-align: center;
-    color: #EC00B2;
     line-height: 100px;
     margin-top: -87px;
     opacity: 80%;
     font-weight: bold;
   }
-
-  .infoText span {
-    color: #ffffff;
-  }
+.comming_span{
+  background: linear-gradient(to bottom right, #EC00B2 , rgba(236, 0, 178,.34) , #EC00B2);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+  .soon_span{
+    background: linear-gradient(to bottom right, #FFFFFF , rgba(255, 255, 255,.45) , #FFFFFF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  } 
   
-  .content {
+   .content {
     width: 700px;
     height: 129px;
     text-align: center;
@@ -65,9 +82,9 @@
     justify-content: center;
     margin-top: 32px;
     gap: 6px;
-  }
+  } 
   
-  .notify-form input {
+   .notify-form input {
     font-size: 16px;
     padding: 20px;
     border-radius: 2rem;
@@ -78,6 +95,9 @@
     height: 68px;
     outline: none;
     opacity: 50%;
+  }
+  .notify-form input:focus{
+    border: 1px solid #E623BA;
   }
   
   .notify-form input::placeholder {
@@ -100,22 +120,11 @@
   
   .notify-form button:hover {
     opacity: 0.85;
-  }
+  } 
   
 
-  @media (max-width: 800px) {
-    body {
-        background: radial-gradient(
-          ellipse at center,
-          rgba(255, 0, 144, 0.15),
-          rgb(24, 3, 22),
-          rgb(22, 3, 21)
-        );
-        background-color: #3A0635;
-        font-family: 'Inter', sans-serif;
-        color: white;
-        padding: 50px;
-      }
+   @media (max-width: 800px) {
+   
 
     .logo {
         margin: auto;
@@ -160,29 +169,21 @@
   }
 
   @media (max-width: 600px) {
-    body {
-        padding: 20px;
-      }
-    .modelContainer {
-        width: 300px;
-        height: 400px;
-      }
-      
-      .model {
-        width: 220px;
-        height: 350px;
-      }
+   
+    .container_wrapper{
+      padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+      background-image: url("./model_bg_mobile.png");
+    }
 
       .infoText{
         font-size: 60px;
         line-height: 60px;
-        margin-top: -52px;
       }
 
       .content {
         height: 200px;
         width: 100%;
-        margin-top: 60px;
+        margin-top: 10px;
     }
 
     .notify-text {
@@ -204,4 +205,4 @@
         width: 100%;
         margin-top: 20px;
       }
-  }
+  } 
