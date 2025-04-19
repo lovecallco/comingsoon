@@ -133,12 +133,12 @@
     }
 
     .modelContainer{
-        height: 400px;
+        height: 330px;
     }
 
     .model {
         width: 308px;
-        margin-top: 55px;
+        margin-top: 15px;
       }
     
       .infoText{
