@@ -49,6 +49,7 @@
     margin-top: -87px;
     opacity: 80%;
     font-weight: bold;
+    text-shadow: 1px 1px 4px currentColor;
   }
 .comming_span{
   background: linear-gradient(to bottom right, #EC00B2 , rgba(236, 0, 178,.34) , #EC00B2);
@@ -132,12 +133,11 @@
     }
 
     .modelContainer{
-        height: 520px;
+        height: 400px;
     }
 
     .model {
         width: 308px;
-        height: 400px;
         margin-top: 55px;
       }
     
@@ -173,6 +173,11 @@
     .container_wrapper{
       padding: 1.5rem 1.5rem 2.5rem 1.5rem;
       background-image: url("./model_bg_mobile.png");
+    }
+
+    .model{
+      width: 20rem;
+    
     }
 
       .infoText{
