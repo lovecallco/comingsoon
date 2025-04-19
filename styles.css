@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 0, 144, 0.15),
+      rgb(24, 3, 22),
+      rgb(22, 3, 21)
+    );
+    background-color: #3A0635;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    padding: 50px;
+  }
+  
+  .modelContainer {
+    margin: auto;
+    width: 453.23px;
+    height: 586.45px;
+  }
+  
+  .model {
+    width: 368px;
+    margin: auto;
+    height: 473px;
+    display: block;
+  }
+
+  .infoText{
+    font-size: 105.45px;
+    text-align: center;
+    color: #EC00B2;
+    line-height: 100px;
+    margin-top: -87px;
+    opacity: 80%;
+    font-weight: bold;
+  }
+
+  .infoText span {
+    color: #ffffff;
+  }
+  
+  .content {
+    width: 700px;
+    height: 129px;
+    text-align: center;
+    margin: auto;
+  }
+  .notify-text {
+    font-size: 24px;
+    margin-top: 90px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    color: #d4d4d4;
+  }
+  
+  .notify-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 6px;
+  }
+  
+  .notify-form input {
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 2rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    width: 463px;
+    height: 68px;
+    outline: none;
+    opacity: 50%;
+  }
+  
+  .notify-form input::placeholder {
+    color: #ccc;
+  }
+  
+  .notify-form button {
+    font-size: 16px;
+    background: linear-gradient(to bottom right, #AD6DFF, #FF019A);
+    color: white;
+    width: 221px;
+    height: 68px;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+  }
+  
+  .notify-form button:hover {
+    opacity: 0.85;
+  }
+  
+
+  @media (max-width: 800px) {
+    body {
+        background: radial-gradient(
+          ellipse at center,
+          rgba(255, 0, 144, 0.15),
+          rgb(24, 3, 22),
+          rgb(22, 3, 21)
+        );
+        background-color: #3A0635;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        padding: 50px;
+      }
+
+    .logo {
+        margin: auto;
+        width: 150px;
+    }
+
+    .modelContainer{
+        height: 520px;
+    }
+
+    .model {
+        width: 308px;
+        height: 400px;
+        margin-top: 55px;
+      }
+    
+      .infoText{
+        font-size: 90px;
+        color: #EC00B2;
+        line-height: 85px;
+        margin-top: -75px;
+        opacity: 80%;
+        font-weight: bold;
+      }
+
+    .content {
+        width: 500px;
+    }
+      
+      .notify-form input {
+        font-size: 14px;
+        width: 350px;
+        height: 54px;
+      }
+      
+      .notify-form button {
+        font-size: 14px;
+        width: 160px;
+        height: 54px;
+      }
+      
+  }
+
+  @media (max-width: 600px) {
+    body {
+        padding: 20px;
+      }
+    .modelContainer {
+        width: 300px;
+        height: 400px;
+      }
+      
+      .model {
+        width: 220px;
+        height: 350px;
+      }
+
+      .infoText{
+        font-size: 60px;
+        line-height: 60px;
+        margin-top: -52px;
+      }
+
+      .content {
+        height: 200px;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .notify-text {
+        font-size: 16px;
+    }
+
+     .notify-form {
+        display: block;
+        margin-top: 20px;
+      }
+      
+      .notify-form input {
+        font-size: 14px;
+        width: 100%;
+      }
+      
+      .notify-form button {
+        font-size: 14px;
+        width: 100%;
+        margin-top: 20px;
+      }
+  }
