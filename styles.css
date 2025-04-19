@@ -8,8 +8,7 @@
     background-image: linear-gradient(to top,  #1F033A, #080808);
     font-family: 'Inter', sans-serif;
     background-image: no-repeat;
-
-   
+    min-height: 100vh;
   }
   .container_wrapper{
     background-image: url("./model_bg.png");
