@@ -8,7 +8,8 @@
     background-image: linear-gradient(to top,  #1F033A, #080808);
     font-family: 'Inter', sans-serif;
     background-image: no-repeat;
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
   }
   .container_wrapper{
     background-image: url("./model_bg.png");
@@ -32,19 +33,16 @@
     flex-direction: column;
 
 
-  }
-
-  
-  
-
+  } 
  .model{
-  width: 28.3rem;
+  width: 22rem;
+  height: 20rem;
 
 }  
   .infoText{
-    font-size: 105.45px;
+    font-size: 80px;
     text-align: center;
-    line-height: 100px;
+    line-height: 70px;
     margin-top: -87px;
     opacity: 80%;
     font-weight: bold;
@@ -64,10 +62,10 @@
   } 
   
    .content {
-    width: 700px;
+    width: 500px;
     height: 129px;
     text-align: center;
-    margin: 150px auto;
+    margin: 20px auto;
   }
   .notify-text {
     font-size: 24px;
@@ -91,7 +89,7 @@
     background: rgba(255, 255, 255, 0.1);
     color: white;
     width: 463px;
-    height: 68px;
+    height: 55px;
     outline: none;
     opacity: 50%;
   }
@@ -108,7 +106,7 @@
     background: linear-gradient(to bottom right, #AD6DFF, #FF019A);
     color: white;
     width: 221px;
-    height: 68px;
+    height: 55px;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;
@@ -128,6 +126,11 @@
   
 
    @media (max-width: 800px) {
+
+    .container_wrapper{
+      padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+      background-image: url("./model_bg_mobile.png");
+    }
    
 
     .logo {
@@ -136,26 +139,17 @@
     }
 
     .modelContainer{
-        height: 400px;
+        height: 200px;
     }
 
     .model {
         width: 308px;
         margin-top: 15px;
       }
-    
-      .infoText{
-        font-size: 90px;
-        color: #EC00B2;
-        line-height: 85px;
-        margin-top: -75px;
-        opacity: 80%;
-        font-weight: bold;
-      }
 
     .content {
         width: 500px;
-        margin: 250px auto;
+        margin: 200px auto;
     }
       
       .notify-form input {
@@ -173,11 +167,6 @@
   }
 
   @media (max-width: 600px) {
-   
-    .container_wrapper{
-      padding: 1.5rem 1.5rem 2.5rem 1.5rem;
-      background-image: url("./model_bg_mobile.png");
-    }
 
     .model{
       width: 20rem;
@@ -192,7 +181,7 @@
       .content {
         height: 200px;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 180px;
     }
 
     .notify-text {
