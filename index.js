@@ -40,7 +40,7 @@ function checkInput(input) {
       });
   
       const successMessage = `
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; color: #ffffff;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 16px; color: #ffffff; padding: 10%">
           <h1 class="title">Thanks for signing up! 🎉</h1>
           <p style="color: rgba(255,255,255,0.8); font-size: 18px;">We'll notify you as soon as we're live.</p>
         </div>
