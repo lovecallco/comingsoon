@@ -35,29 +35,31 @@
 	</head>
 
 	<body>
-		<div class="logo">
-			<img src="Logo.svg" alt="Logo" />
-		</div>
-		<div class="container_wrapper">
-			<div class="model_wrapper">
-				<div class="modelContainer">
-					<img src="./model.png" alt="Model" class="model" />
-					<h1 class="infoText">
-						<span class="comming_span" data-text="COMING">COMING</span>
-						<br /><span class="soon_span">SOON</span>
-					</h1>
-				</div>
+		<div class="wrapper">
+			<div class="logo">
+				<img src="Logo.svg" alt="Logo" />
+			</div>
+			<div class="container_wrapper">
+				<div class="model_wrapper">
+					<div class="modelContainer">
+						<img src="./model.png" alt="Model" class="model" />
+						<h1 class="infoText">
+							<span class="comming_span" data-text="COMING">COMING</span>
+							<br /><span class="soon_span">SOON</span>
+						</h1>
+					</div>
 
-				<div class="content">
-					<p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
+					<div class="content">
+						<p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
 
-					<div class="notify-form">
-						<input
-							type="email"
-							placeholder="Enter your email"
-							oninput="checkInput(this)"
-						/>
-						<button disabled onclick="submitEmail(this)">Notify me</button>
+						<div class="notify-form">
+							<input
+								type="email"
+								placeholder="Enter your email"
+								oninput="checkInput(this)"
+							/>
+							<button disabled onclick="submitEmail(this)">Notify me</button>
+						</div>
 					</div>
 				</div>
 			</div>
