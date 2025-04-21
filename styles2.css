@@ -205,6 +205,10 @@ body {
 		max-width: 600px;
 	}
 
+	.infoText {
+		font-size: 72px;
+	}
+
 	.model {
 		height: 28rem;
 	}
@@ -224,6 +228,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+	.infoText {
+		font-size: 80px;
+	}
+
 	.model {
 		height: 32rem;
 	}
