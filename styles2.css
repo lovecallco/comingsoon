@@ -29,16 +29,13 @@ body {
 	font-family: "Inter", sans-serif;
 
 	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
 .container_wrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	background-image: url("/model_bg_mobile.png");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -198,8 +195,13 @@ body {
 @media (min-width: 768px) {
 	.container_wrapper {
 		padding: 0 100px;
+		justify-content: center;
 		background-image: url("/model_bg.png");
 		align-items: flex-start;
+	}
+
+	.logo {
+		padding-bottom: 20px;
 	}
 
 	.notify-text {
@@ -208,15 +210,16 @@ body {
 
 	.notify-form {
 		margin: 0 auto;
-		flex-direction: row;
 		max-width: 600px;
-	}
-
-	.notify-form button {
-		width: 200px;
 	}
 
 	.model-wrapper {
 		margin: 0 auto;
+	}
+}
+
+@media (min-width: 1024px) {
+	.model {
+		height: 32rem;
 	}
 }
