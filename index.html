@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="theme-color" content="#080808" />
+		<meta name="msapplication-navbutton-color" content="#080808" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta
+			name="apple-mobile-web-app-status-bar-style"
+			content="black-translucent"
+		/>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#080808">
-  <meta name="msapplication-navbutton-color" content="#080808">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta property="og:title" content="LoveCall.co — Coming Soon" />
+		<meta property="og:description" content="Get notified when we go live!" />
+		<meta
+			property="og:image"
+			content="https://lovecall.co/landingpageimage.png"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:url" content="https://lovecall.co" />
+		<meta name="twitter:card" content="summary_large_image" />
 
-  <meta property="og:title" content="LoveCall.co — Coming Soon" />
-  <meta property="og:description" content="Get notified when we go live!" />
-  <meta property="og:image" content="https://lovecall.co/landingpageimage.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:url" content="https://lovecall.co" />
-  <meta name="twitter:card" content="summary_large_image" />
+		<title>LoveCall.co — Coming Soon</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link href="styles2.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="index.js" defer></script>
+	</head>
 
-  <title>LoveCall.co — Coming Soon</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link href="styles.css" rel="stylesheet" />
-  <script src="index.js" defer></script>
-</head>
+	<body>
+		<div class="logo">
+			<img src="Logo.svg" alt="Logo" />
+		</div>
+		<div class="container_wrapper">
+			<div class="model_wrapper">
+				<div class="modelContainer">
+					<img src="./model.png" alt="Model" class="model" />
+					<h1 class="infoText">
+						<span class="comming_span" data-text="COMING">COMING</span>
+						<br /><span class="soon_span">SOON</span>
+					</h1>
+				</div>
 
+				<div class="content">
+					<p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
 
-<body>
- <div class="container_wrapper">
-  <div class="logo">
-    <img src="Logo.svg" alt="Logo">
-  </div>
-
-  <div class="model_wrapper">
-    <div class="modelContainer">
-      <img src="./model.png" alt="Model" class="model" />
-      <h1 class="infoText">
-        <span class="comming_span">COMING</span> <br /><span class="soon_span">SOON</span>
-      </h1>
-    </div>
-  
-    <div class="content">
-      <p class="notify-text">GET NOTIFIED WHEN WE’RE LIVE</p>
-  
-      <div class="notify-form">
-        <input type="email" placeholder="Enter your email" oninput="checkInput(this)" />
-        <button disabled onclick="submitEmail(this)">Notify me</button>
-      </div>
-    </div>
-  </div>
- </div>
-</body>
-
+					<div class="notify-form">
+						<input
+							type="email"
+							placeholder="Enter your email"
+							oninput="checkInput(this)"
+						/>
+						<button disabled onclick="submitEmail(this)">Notify me</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
