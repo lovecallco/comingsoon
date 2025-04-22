@@ -193,6 +193,10 @@ body {
 }
 
 @media (min-width: 768px) {
+	body {
+		position: relative;
+	}
+
 	.container_wrapper {
 		padding: 0 30px;
 		justify-content: center;
@@ -201,7 +205,9 @@ body {
 	}
 
 	.logo {
-		padding-bottom: 20px;
+		position: absolute;
+		top: 30px;
+		left: 30px;
 	}
 
 	.infoText {
